@@ -19,7 +19,7 @@ pipeline{
                     } else {
                         echo 'no container found, running new one...'
                     }       
-                    bat 'docker run -p 80:80 -d sahilrajputwins/hla:%BUILD_ID%'
+                    bat 'docker run --name %container_name% -p 80:80 -d sahilrajputwins/hla:%BUILD_ID%'
                 }
             }
         }
