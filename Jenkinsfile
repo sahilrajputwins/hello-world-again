@@ -15,7 +15,7 @@ pipeline{
                     def ifExists=bat(script: 'docker ps -a --format "{{.Names}}" | findstr %container_name%', returnStatus: true)
                     if(ifExists==0){
                         bat 'docker stop %container_name%'
-                        bat 'docker stop %container_name%'
+                        bat 'docker rm %container_name%'
                     } else {
                         echo 'no container found, running new one...'
                     }       
