@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment{
-        container_name = hello_container
+        container_name = 'hello_container'
     }
     stages{
         stage("Build Image"){
