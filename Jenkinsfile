@@ -6,7 +6,7 @@ pipeline{
     stages{
         stage("Build Image"){
             steps{
-                bat 'docker build -t sahilrajputwins/hla .:%BUILD_ID%'
+                bat 'docker build -t sahilrajputwins/hla:%BUILD_ID% .'
             }
         }
         stage("Run Container"){
