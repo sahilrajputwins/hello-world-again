@@ -22,3 +22,15 @@ steps:
     docker run --name test-container -p 80:80 -d sahilrajputwins/test-pipeline:6
   displayName: 'Run a container'
 
+- task: UseDotNet@2
+  displayName: 'Install .NET SDK'
+  inputs:
+    packageType: 'sdk'
+    version: '6.x'
+    installationPath: $(Agent.ToolsDirectory)/dotnet
+  
+- script:
+    echo dotnet --version
+  displayName: '.net Version'
+
+
