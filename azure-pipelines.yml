@@ -19,6 +19,6 @@ steps:
   displayName: 'Run a multi-line script'
 
 - script: 
-    docker run --name test-container -p 80:80 -d sahilrajputwins/hla:8
+    docker run --name test-container -p 80:80 -d sahilrajputwins/test-pipeline:6
   displayName: 'Run a container'
 
