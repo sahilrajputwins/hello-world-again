@@ -7,7 +7,7 @@ trigger:
 - master
 
 pool:
-  name: demo-pool
+  name: custom-pool
 
 steps:
 - script: echo Hello, world!
