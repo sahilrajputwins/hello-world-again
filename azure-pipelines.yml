@@ -26,11 +26,10 @@ steps:
   displayName: 'Install .NET SDK'
   inputs:
     packageType: 'sdk'
-    version: '6.x'
     installationPath: $(Agent.ToolsDirectory)/dotnet
   
 - script:
-    dotnet --version
+    dotnet --info
   displayName: '.net Version'
 
 
